@@ -40,3 +40,4 @@ vignettes/*.pdf
 
 Results/*.csv
 CodeToRunLocal.R
+Cohorts/*.csv
