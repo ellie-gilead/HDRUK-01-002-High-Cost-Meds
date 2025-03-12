@@ -32,6 +32,13 @@ cdm$high_cost_meds <- subsetCohorts(cdm$high_cost_meds,
 cdm$high_cost_meds <- cdm$high_cost_meds |> 
   matchCohorts(ratio = 1, 
                keepOriginalCohorts = TRUE)
+# new cohort ids
+high_cost_meds_with_count <- cohortCount(cdm$high_cost_meds) |>
+  left_join(settings(cdm$high_cost_meds),
+            by = "cohort_definition_id") |> 
+  filter(number_subjects > 0) |> 
+  filter(stringr::str_detect(cohort_name, "sampled|matched", negate = TRUE)) |> 
+  dplyr::pull("cohort_definition_id")
 
 # icd chapter cohorts -----
 # as not all dps will have icd codes in their vocab, pre compute these
