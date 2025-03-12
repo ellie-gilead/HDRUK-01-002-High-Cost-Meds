@@ -2,7 +2,6 @@
 drug_name <- readr::read_csv(here("cohorts",
                                   "high_cost_ingredients.csv"), 
                              col_types = list(col_character()))
-drug_name <- readr::read_csv(here("high_cost_ingredients.csv"))
 drug_name <- drug_name |>
   filter(is.na(exclude_reason)) |> 
   mutate(concept_id = as.integer(concept_id))
