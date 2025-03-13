@@ -41,3 +41,4 @@ feasibility/characterisation_results/*.csv
 study_shiny/data/shinyData.RData
 study_shiny/data/results.csv
 feasibility/*.png
+study_code/Results/*.csv
