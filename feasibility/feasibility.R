@@ -21,22 +21,11 @@ concept_counts <- results |>
   suppress(5)
 
 # get codes for all drugs from the high cost medicines  -----
-drug_name <- readr::read_csv(here("high_cost_ingredients.csv"))
-drug_name <- drug_name |>
-  filter(is.na(exclude_reason)) |> 
-  mutate(concept_id = as.integer(concept_id))
-
-drug_name |>
-  select("concept_id") |>
-  distinct() |>
-  nrow()
-drug_name |>
-  group_by(concept_id) |>
-  tally() |>
-  arrange(desc(n))
+hc_meds <- readr::read_csv(here("hc_meds.csv")) |> 
+  filter(is.na(exclusion_reason))
 
 drug_codes <- getDrugIngredientCodes(cdm, 
-                                     drug_name$concept_id, 
+                                     hc_meds$concept_id, 
                                      nameStyle = "{concept_name}")
 
 # get record counts from feasibility results -----
@@ -79,7 +68,8 @@ plot_data |>
   ggplot() + 
   geom_col(aes(reorder(ingredient_concept_name, count), 
                count, 
-               fill = cdm_name)) +
+               fill = cdm_name, 
+               colour = "atc_1")) +
   ggplot2::coord_flip() + 
   theme_bw() +
   xlab("") +
