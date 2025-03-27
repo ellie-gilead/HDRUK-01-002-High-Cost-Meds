@@ -29,6 +29,19 @@ exportCodelist(drug_codes,
                path = here("codelists"),
                type = "csv")
 
+# export table with concept code for each med ----- 
+readr::write_csv(
+  tibble(
+    med_names = names(drug_codes)) |> 
+    mutate(
+      concept_name = stringr::str_replace(names(drug_codes), "^[^_]*_", ""),
+      concept_code = stringr::str_extract(med_names, "^[^_]*")) |> 
+    mutate(concept_name = stringr::str_to_sentence(concept_name)) |> 
+    select(!med_names),   
+  here::here("hc_meds_concept_code.csv")
+)
+
+
 # get atc equivalence ------
 atc_ref <- list()
 for(i in seq_along(names(drug_codes))){
@@ -57,6 +70,7 @@ atc_ref[[i]] <- cdm$concept |>
 atc_ref <- bind_rows(atc_ref)
 
 readr::write_csv(atc_ref, "atc_ref.csv")
+
 
 
 
