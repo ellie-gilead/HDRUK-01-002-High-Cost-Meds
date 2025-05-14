@@ -1,613 +1,675 @@
-concept_name,concept_code
-Autologous_cultured_chondrocytes,1000589
-Antithrombin_iii,1009
-Fingolimod,1012892
-Thalidomide,10432
-Eribulin,1045453
-Epoetin_alfa,105694
-Epoetin_beta,105695
-Tobramycin,10627
-Trientine,10798
-Liothyronine,10814
-Belimumab,1092437
-Ipilimumab,1094833
-Vandetanib,1098413
-Abiraterone,1100072
-Rilpivirine,1102270
-Fidaxomicin,1111103
-Vancomycin,11124
-Belatacept,1112973
-Von_willebrand_factor,11274
-Zidovudine,11413
-Indinavir,114289
-Vemurafenib,1147220
-Icatibant,1148138
-Crizotinib,1148495
-Deferiprone,11645
-Alemtuzumab,117055
-Tenofovir,117466
-Verteporfin,118886
-Ruxolitinib,1193326
-Peginterferon_alfa_2a,120608
-Rituximab,121191
-Voriconazole,121243
-Aflibercept,1232150
-Glucarpidase,1242127
-Vismodegib,1242987
-Axitinib,1242999
-Ivacaftor,1243041
-Azacitidine,1251
-Azathioprine,1256
-Gemcitabine,12574
-Aztreonam,1272
-Gemtuzumab_ozogamicin,1294580
-Pertuzumab,1298944
-Carfilzomib,1302966
-Cobicistat,1306284
-Elvitegravir,1306286
-Enzalutamide,1307298
-Bosutinib,1307619
-Teriflunomide,1310520
-Defibrotide,1311089
-Regorafenib,1312397
-Triheptanoin,1313234
-Nelfinavir,134527
-Bendamustine,134547
-Tofacitinib,1357536
-Cabozantinib,1363268
-Hydroxypropylbetadex_0_58_0_68_ms,1363608
-Pasireotide,1364105
-Sildenafil,136411
-Ponatinib,1364347
-Teduglutide,1364468
-Lomitapide,1364479
-Bedaquiline,1364504
-Glycerol_phenylbutyrate,1368451
-Pomalidomide,1369713
-Polihexanide,1373041
-Dimethyl_fumarate,1373478
-Tiratricol,13982
-Enfuvirtide,139896
-Caspofungin,140108
-Everolimus,141704
-Dabrafenib,1424911
-Trametinib,1425099
-Parathyroid_hormone,1427222
-Afatinib,1430438
-Dolutegravir,1433868
-Riociguat,1439816
-Cholic_acid,1440856
-Macitentan,1442132
-Ibrutinib,1442981
-Sucroferric_oxyhydroxide,1484283
-Sofosbuvir,1484911
-Elosulfase_alfa,1489914
-Metreleptin,1491625
-Apremilast,1492727
-Betaine,1512
-Fomepizole,15226
-Siltuximab,1535218
-Ceritinib,1535457
-Ramucirumab,1535922
-Coagulation_factor_ix_recombinant_immunoglobulin_g1_fusion_protein,1535944
-Vedolizumab,1538097
-Efmoroctocog_alfa,1543095
-Idelalisib,1544460
-Tafamidis,1545063
-Peginterferon_beta_1a,1546168
-Eliglustat,1547220
-Pembrolizumab,1547545
-Poloxamer_188,155152
-Decitabine,15657
-Biotin,1588
-Ledipasvir,1591922
-Pirfenidone,1592254
-Nintedanib,1592737
-Blinatumomab,1597258
-Ombitasvir,1597371
-Paritaprevir,1597373
-Dasabuvir,1597381
-Olaparib,1597582
-Nivolumab,1597876
-Secukinumab,1599788
-C1_esterase_inhibitor,1599832
-Palbociclib,1601374
-Lenvatinib,1603296
-Panobinostat,1603350
-Alirocumab,1659152
-Uridine_triacetate,1665222
-Evolocumab,1665684
-Factor_ix_complex,1670383
-Idarucizumab,1716191
-Trabectedin,1716278
-Asfotase_alfa,1720259
-Mepolizumab,1720597
-Isavuconazole,1720882
-Osimertinib,1721560
-Tenofovir_alafenamide,1721603
-Daratumumab,1721947
-Cobimetinib,1722365
-Ixazomib,1723735
-Necitumumab,1723738
-Elotuzumab,1726104
-Sebelipase_alfa,1726975
-Alectinib,1727455
-Selexipag,1729002
-Elbasvir,1734628
-Grazoprevir,1734630
-Ixekizumab,1745099
-Reslizumab,1746889
-Obiltoxaximab,1746906
-Venetoclax,1747556
-Bromelains,1752
-Atezolizumab,1792776
-Obeticholic_acid,1798288
-Eteplirsen,1810569
-Vonicog_alfa,1812589
-Arsenic_trioxide,18330
-Bezlotoxumab,1855048
-Rucaparib,1862579
-Nusinersen,1863556
-Brodalumab,1872251
-Telotristat,1872382
-Ribociclib,1873916
-Avelumab,1875534
-Ocrelizumab,1876366
-Dupilumab,1876376
-Calcifediol,1889
-Abacavir,190521
-Tipranavir,190548
-Valbenazine,1918219
-Niraparib,1918231
-Infliximab,191831
-Midostaurin,1919083
-Durvalumab,1919503
-Abaloparatide,1921069
-Brigatinib,1921217
-Cerliponase,1922437
-Sarilumab,1923319
-Guselkumab,1928588
-Glecaprevir,1940635
-Pibrentasvir,1940636
-Neratinib,1940643
-Palivizumab,194279
-Inotuzumab_ozogamicin,1942950
-Abemaciclib,1946825
-Efavirenz,195085
-Lopinavir,195088
-Basiliximab,196102
-Tisagenlecleucel,1986438
-Acalabrutinib,1986808
-Axicabtagene_ciloleucel,1987398
-Letermovir,1988648
-Benralizumab,1989100
-Emicizumab,1989794
-Vestronidase_alfa,1989819
-Voretigene_neparvovec,1995537
-Tezacaftor,1999382
-Macimorelin,1999420
-Apalutamide,1999574
-Bictegravir,1999660
-Digoxin_antibodies_fab_fragments,203223
-Ibalizumab,2043283
-Burosumab,2043855
-Fostamatinib,2044896
-Andexanet_alfa,2045114
-Cannabidiol,2045371
-Erenumab,2045613
-Avatrombopag,2045726
-Pegvaliase,2046360
-Baricitinib,2047232
-Encorafenib,2049106
-Binimetinib,2049122
-Ivosidenib,2049873
-Tildrakizumab,2053436
-Patisiran,2053490
-Mogamulizumab,2054068
-Migalastat,2054252
-Lusutrombopag,2054984
-Lanadelumab,2055641
-Damoctocog_alfa_pegol,2055655
-Doravirine,2055755
-Fremanezumab,2056691
-Duvelisib,2058509
-Cemiplimab,2058826
-Galcanezumab,2058846
-Dacomitinib,2058849
-Inotersen,2099289
-Talazoparib,2099704
-Lorlatinib,2103164
-Cenegermin,2104332
-Hydroxypropyl_betadex_0_6_hydroxypropyl_residues_per_glucose,2105627
-Larotrectinib,2105628
-Gilteritinib,2105806
-Carnitine,2106
-Amifampridine,2106338
-Ravulizumab,2107301
-Tagraxofusp,2109055
-Caplacizumab,2110605
-Siponimod,2121085
-Solriamfetol,2121751
-Romosozumab,2123126
-Etanercept,214555
-Glatiramer,214582
-Risankizumab,2166040
-Alpelisib,2169285
-Onasemnogene_abeparvovec,2170226
-Polatuzumab_vedotin,2174090
-Selinexor,2178390
-Darolutamide,2180325
-Upadacitinib,2196092
-Fedratinib,2197490
-Entrectinib,2197862
-Pitolisant,2197878
-Pretomanid,2198359
-Brolucizumab,2204915
-Trastuzumab,224905
-Diroximel_fumarate,2261783
-Afamelanotide,2262250
-Crizanlizumab,2262279
-Zanubrutinib,2262435
-Luspatercept,2262544
-Voxelotor,2265678
-Givosiran,2265712
-Enfortumab,2268307
-Avapritinib,2272107
-Teprotumumab,2274803
-Isatuximab,2282018
-Rimegepant,2282307
-Eptinezumab,2282660
-Remdesivir,2284718
-Osilodrostat,2286252
-Ozanimod,2288236
-Selumetinib,2289380
-Pemigatinib,2359268
-Sacituzumab,2360231
-Tucatinib,2361285
-Capmatinib,2362165
-Ripretinib,2369389
-Selpercatinib,2370147
-Inebilizumab,2373951
-Fostemsavir,2380373
-Tafasitamab,2387211
-Brexucabtagene_autoleucel,2387277
-Belantamab_mafodotin,2387834
-Risdiplam,2390935
-Satralizumab,2391541
-Pralsetinib,2394936
-Lumasiran,2467140
-Berotralstat,2467540
-Lonafarnib,2467553
-Setmelanotide,2469247
-Cabotegravir,2475077
-Voclosporin,2475166
-Tepotinib,2477103
-Evinacumab,2478335
-Lisocabtagene_maraleucel,2479136
-Fosdenopterin,2531288
-Ponesimod,2532300
-Bevacizumab,253337
-Tivozanib,2534233
-Idecabtagene_vicleucel,2536430
-Dostarlimab,2539967
-Amivantamab,2549199
-Sotorasib,2550714
-Sotrovimab,2550731
-Aducanumab,2557217
-Pegcetacoplan,2557372
-Somapacitan,2557373
-Odevixibat,2563966
-Belumosudil,2564025
-Anifrolumab,2565265
-Avalglucosidase_alfa,2565814
-Belzutifan,2567226
-Difelikefalin,2569089
-Lonapegsomatropin,2569562
-Mobocertinib,2570736
-Maralixibat,2571074
-Atogepant,2571813
-Avacopan,2572100
-Asciminib,2584304
-Maribavir,2586068
-Vosoritide,2586354
-Ropeginterferon_alfa_2b,2587059
-Efgartigimod_alfa,2587717
-Tezepelumab,2587789
-Molnupiravir,2587901
-Inclisiran,2588243
-Tralokinumab,2589225
-Tebentafusp,2590743
-Sutimlimab,2591404
-Abrocitinib,2591476
-Faricimab,2591519
-Bebtelovimab,2592360
-Mitapivat,2594468
-Ciltacabtagene_autoleucel,2594775
-Pacritinib,2595243
-Relatlimab,2596773
-Vipivotide_tetraxetan,2597054
-Mavacamten,2600867
-Vutrisiran,2604578
-Ganaxolone,2604689
-Olipudase_alfa,2610407
-Teclistamab,2619426
-Mosunetuzumab,2625122
-Lenacapavir,2625651
-Ublituximab,2626349
-Etranacogene_dezaparvovec,2626727
-Futibatinib,2628190
-Panitumumab,263034
-Velmanase_alfa,2630725
-Leniolisib,2633005
-Tofersen,2634995
-Volanesorsen,2637345
-Epcoritamab,2637392
-Pegunigalsidase_alfa,2637446
-Zavegepant,2637955
-Rezafungin,2639155
-Glofitamab,2639782
-Valoctocogene_roxaparvovec,2641610
-Delandistrogene_moxeparvovec,2641675
-Nirsevimab,2642401
-Quizartinib,2643048
-Nadofaragene_firadenovec,2644436
-Elranatamab,2644880
-Heme_arginate,26506
-Palovarotene,2663954
-Momelotinib,2665204
-Cipaglucosidase_alfa,2667433
-Etrasimod,2668045
-Vamorolone,2669799
-Iptacopan,2671061
-Exagamglogene_autotemcel,2671667
-Eplontersen,2671939
-Zilucoplan,2672489
-Nedosiran,2675287
-Lifileucel,2675860
-Atidarsagene_autotemcel,2677916
-Sotatercept,2678930
-Danicopan,2678952
-Vadadustat,2679296
-Fidanacogene_elaparvovec,2681011
-Imetelstat,2685236
-Lebrikizumab,2693758
-Marstacimab,2697133
-Colistin,2709
-Mecasermin,274403
-Nelarabine,274771
-Emtricitabine,276237
-Pegvisomant,278739
-Imatinib,282388
-Posaconazole,282446
-Tasonermin,283746
-Rasburicase,283821
-Darbepoetin_alfa,283838
-Ocriplasmin,29998
-Tenofovir_disoproxil,300195
-Cyclosporine,3008
-Cysteamine,3022
-Omalizumab,302379
-Deferoxamine,3131
-Anti_inhibitor_coagulant_complex,314504
-Nitazoxanide,31819
-Cetuximab,318341
-Micafungin,325887
-Adalimumab,327361
-Gefitinib,328134
-Didanosine,3364
-Erlotinib,337525
-Dornase_alfa,337623
-Agalsidase_beta,338817
-Anidulafungin,341018
-Pegaspargase,34132
-Lenalidomide,342369
-Atazanavir,343047
-Treprostinil,343048
-Sirolimus,35302
-Rho_d_immune_globulin,35465
-Natalizumab,354770
-Sunitinib,357977
-Tolvaptan,358257
-Bortezomib,358258
-Fosamprenavir,358262
-Tadalafil,358263
-Ambrisentan,358274
-Temozolomide,37776
-Treosulfan,38508
-Laronidase,392509
-Iloprost,40138
-Carglumic_acid,401713
-Miglustat,402316
-Tacrolimus,42316
-Factor_ix,4249
-Factor_vii,4254
-Factor_vi_ia,4256
-Factor_viii,4257
-Chenodeoxycholate,42588
-Factor_x,4262
-Factor_xiii,4271
-Dexrazoxane,42736
-Fenfluramine,4328
-Interferon_beta,4381
-Fibrinogen,4385
-Clofarabine,44151
-Cladribine,44157
-Darunavir,460132
-Telbivudine,474128
-Dasatinib,475342
-Etravirine,475969
-Lapatinib,480167
-Sorafenib,495881
-Idebenone,51296
-Alpha_1_antitrypsin,535
-Nevirapine,53654
-Immunoglobulin_g,5666
-Paclitaxel,56946
-Galsulfase,578033
-Interferon_alfa_2a,5879
-Interferon_alfa_2b,5880
-Collagenase,58939
-Eculizumab,591781
-Ranibizumab,595060
-Stavudine,59763
-Somatropin,61148
-Tocilizumab,612865
-Interferon_alfa_n3,612937
-Deferasirox,614373
-Abatacept,614391
-Nitisinone,61805
-Maraviroc,620216
-Alglucosidase_alfa,629565
-Amikacin,641
-Idursulfase,644101
-Temsirolimus,657797
-Ecallantide,658708
-Nilotinib,662281
-Mannitol,6628
-Mechlorethamine,6674
-Lanreotide,68092
-Mycophenolate_mofetil,68149
-Pemetrexed,68446
-Mexiletine,6926
-Aldesleukin,70223
-Certolizumab_pegol,709271
-Eltrombopag,711942
-Ofatumumab,712566
-Pazopanib,714438
-Mycophenolic_acid,7145
-Raltegravir,719872
-Anakinra,72435
-Docetaxel,72962
-Plerixafor,733003
-Paricalcitol,73710
-Nicardipine,7396
-Nitric_oxide,7442
-Bosentan,75207
-Sapropterin,753340
-Octreotide,7617
-Aminosalicylic_acid,7833
-Romiplostim,805452
-Alitretinoin,81864
-Golimumab,819300
-Levofloxacin,82122
-Saquinavir,83395
-Ustekinumab,847083
-Imiglucerase,84959
-Canakinumab,853491
-Ritonavir,85762
-Epoprostenol,8814
-Protein_c,8834
-Dalfampridine,897018
-Velaglucerase_alfa,901805
-Antilymphocyte_immunoglobulin,973
-Obinutuzumab,974779
-Cabazitaxel,996051
-Sodium_hydroxybutyrate,OMOP1001896
-Colestilan,OMOP1006521
-Invertase,OMOP1131586
-Human_alpha1_proteinase_inhibitor,OMOP2721220
-Bucillamine,OMOP4700442
-Autologous_chondrocyte_spheroids,OMOP4754814
-Copper_histidine,OMOP4754827
-Autologous_human_corneal_epithelial_cells,OMOP4754849
-Dinutuximab_beta,OMOP4754854
-L_arginine,OMOP4819344
-Darvadstrocel,OMOP4870470
-Recombinant_human_granulocyte_colony_stimulating_factor,OMOP5031317
-Filgotinib,OMOP5036197
-Roxadustat,OMOP5040509
-Imlifidase,OMOP5042938
-Doxorubicin_pegylated_liposomal,OMOP5042945
-Leronlimab,OMOP5042953
-Bulevirtide,OMOP5047741
-Autologous_anti_cd19_transduced_cd3_cells,OMOP5051436
-Trastuzumab_deruxtecan,OMOP5051437
-Rurioctocog_alfa_pegol,OMOP5154905
-Nonacog_beta_pegol,OMOP5154916
-Emixustat,OMOP5166270
-Mavrilimumab,OMOP5166824
-Fasinumab,OMOP5166840
-Forigerimod,OMOP5167235
-Bentracimab,OMOP5167357
-Avalotcagene_ontaparvovec,OMOP5167451
-Levoketoconazole,OMOP5167808
-Brimapitide,OMOP5167923
-Vapreotide,OMOP5168034
-Epratuzumab,OMOP5168182
-Piclidenoson,OMOP5168183
-Cobitolimod,OMOP5168254
-Begelomab,OMOP5168364
-Sabizabulin,OMOP5168432
-Sabatolimab,OMOP5168664
-Reloxaliase,OMOP5169162
-Rivipansel,OMOP5169225
-Gantenerumab,OMOP5169266
-Human_coagulation_factor_viii_von_willebrand_factor_complex,OMOP5170166
-Concizumab,OMOP5170570
-Vatiquinone,OMOP5170844
-Eprodisate,OMOP5170869
-Obecabtagene_autoleucel,OMOP5171191
-Olenasufligene_relduparvovec,OMOP5171366
-Magrolimab,OMOP5172397
-Rintatolimod,OMOP5172498
-Turoctocog_alfa_pegol,OMOP5173035
-Letetresgene_autoleucel,OMOP5173479
-Giroctocogene_fitelparvovec,OMOP5173827
-Brentuximab,OMOP5173861
-Bardoxolone_methyl,OMOP5173950
-Mozafancogene_autotemcel,OMOP5174208
-Bizalimogene_ralaplasmid,OMOP5174216
-Emiplacel,OMOP5174331
-Opaganib,OMOP5174344
-Tanezumab,OMOP5174689
-Alunacedase_alfa,OMOP5174915
-Setrusumab,OMOP5175030
-Narsoplimab,OMOP5175055
-Tabelecleucel,OMOP5175151
-Terevalefim,OMOP5175288
-Fordadistrogene_movaparvovec,OMOP5175512
-Etrolizumab,OMOP5175772
-Dirloctocogene_samoparvovec,OMOP5175775
-Remibrutinib,OMOP5175836
-Hydromethylthionine,OMOP5175910
-Botaretigene_sparoparvovec,OMOP5175916
-Alicaforsen,OMOP5176132
-Atacicept,OMOP5176369
-Leriglitazone,OMOP5176431
-Halofuginone,OMOP5176653
-Vafidemstat,OMOP5176947
-Elvucitabine,OMOP5176958
-Plonmarlimab,OMOP5176970
-Masitinib,OMOP5177021
-Beclabuvir,OMOP5177266
-Bimagrumab,OMOP5177289
-Loncastuximab,OMOP5177576
-Teprasiran,OMOP5177590
-Lenabasum,OMOP5177755
-Pegbelfermin,OMOP5177955
-Olokizumab,OMOP5178021
-Tideglusib,OMOP5178310
-C_21,OMOP5178689
-Eladocagene_exuparvovec,OMOP5178914
-Fitusiran,OMOP5179144
-Acoramidis,OMOP5179183
-Apadamtase_alfa,OMOP5179607
-Reparixin,OMOP5179612
-Lenadogene_nolparvovec,OMOP5180606
-Navitoclax,OMOP5180818
-Autologous_cd34_cells_transduced_to_express_human_adenosine_deaminase,OMOP5214783
-Eptacog_beta_activated,OMOP5214785
-Marnetegragene_autotemcel,OMOP5556242
-Prothrombin_complex_concentrate,OMOP5556257
-Efanesoctocog_alfa,OMOP5556459
-Mifamurtide,OMOP988462
-Dibotermin_alfa,OMOP989217
-Factor_xi,OMOP992157
-Eptotermin_alfa,OMOP993691
-Delamanid,OMOP994306
-Ataluren,OMOP994736
-Human_dendritic_cell_antigen,OMOP995035
-Epoetin_zeta,OMOP995386
-Pixantrone,OMOP997118
-Conestat_alfa,OMOP998182
-Epoetin_theta,OMOP998559
+concept_name,concept_id
+Ondansetron,1000560
+Omalizumab,1110942
+Anakinra,1114375
+Adalimumab,1119119
+Dornase alfa,1125443
+Sacituzumab,1145484
+Tucatinib,1145571
+Capmatinib,1145637
+Ripretinib,1145752
+Selpercatinib,1145791
+Inebilizumab,1146077
+Fostemsavir,1146410
+Etanercept,1151789
+Alpha 1 antitrypsin,1169352
+Abatacept,1186087
+Zavegepant,1200957
+Tofersen,1200970
+Volanesorsen,1201198
+Epcoritamab,1201211
+Pegunigalsidase alfa,1201228
+Rezafungin,1201411
+Glofitamab,1201501
+Efanesoctocog alfa,1253104
+Marnetegragene autotemcel,1253798
+Prothrombin complex concentrate,1254255
+Epoetin alfa,1301125
+Melphalan,1301267
+Mosunetuzumab,1301307
+Lenacapavir,1301335
+Ublituximab,1301397
+Etranacogene dezaparvovec,1301479
+Futibatinib,1301597
+Velmanase alfa,1301780
+Leniolisib,1302040
+Imatinib,1304107
+Rasburicase,1304565
+Darbepoetin alfa,1304643
+Filgrastim,1304850
+Pemetrexed,1304919
+Methotrexate,1305058
+Mexiletine,1307542
+Vincristine,1308290
+Mitotane,1309161
+Mitoxantrone,1309188
+Aldesleukin,1309770
+Cyclophosphamide,1310317
+Cytarabine,1311078
+Dacarbazine,1311409
+Dactinomycin,1311443
+Daunorubicin,1311799
+Alemtuzumab,1312706
+Rituximab,1314273
+Azacitidine,1314865
+Gemcitabine,1314924
+Cetuximab,1315411
+Docetaxel,1315942
+Sildenafil,1316262
+Nicardipine,1318137
+Gefitinib,1319193
+Bosentan,1321636
+Erlotinib,1325363
+Pegfilgrastim,1325608
+Pegaspargase,1326481
+Treprostinil,1327256
+Bleomycin,1329241
+Busulfan,1333357
+Arsenic trioxide,1333379
+Sunitinib,1336539
+Bortezomib,1336825
+Tadalafil,1336926
+Ambrisentan,1337068
+Doxorubicin,1338512
+Temozolomide,1341149
+Vinorelbine,1343346
+Carboplatin,1344905
+Iloprost,1344992
+Imiglucerase,1348407
+Carmustine,1350066
+Etoposide,1350504
+Procarbazine,1351779
+Factor ix,1351935
+Factor vi ia,1352141
+Factor viii,1352213
+Dexrazoxane,1353011
+Epoprostenol,1354118
+Mesna,1354698
+Gilteritinib,1355513
+Cenegermin,1355548
+Emapalumab,1355650
+Hydroxypropyl betadex 0 6 hydroxypropyl residues per glucose,1355704
+Larotrectinib,1355705
+Amifampridine,1355889
+Ravulizumab,1356009
+Tagraxofusp,1356361
+Dasatinib,1358436
+Lapatinib,1359548
+Selinexor,1361191
+Darolutamide,1361291
+Upadacitinib,1361580
+Fedratinib,1361614
+Sorafenib,1363387
+Caplacizumab,1366428
+Irinotecan,1367268
+Heparin,1367571
+Hydroxyurea,1377141
+Paclitaxel,1378382
+Topotecan,1378509
+Interferon alfa 2a,1379969
+Interferon alfa 2b,1380068
+Interferon alfa n3,1385645
+Trastuzumab,1387104
+Lomustine,1391846
+Nilotinib,1394023
+Mechlorethamine,1394337
+Fludarabine,1395557
+Alpelisib,1396423
+Onasemnogene abeparvovec,1396458
+Polatuzumab vedotin,1396729
+Bevacizumab,1397141
+Cisplatin,1397599
+Antithrombin iii,1436169
+Mercaptopurine,1436650
+Thioguanine,1437379
+Mecasermin,1502877
+Pegvisomant,1503432
+Lanreotide,1503501
+Liothyronine,1505346
+Burosumab,1510235
+Fostamatinib,1510328
+Andexanet alfa,1510363
+Cannabidiol,1510417
+Erenumab,1510467
+Avatrombopag,1510483
+Pegvaliase,1510552
+Baricitinib,1510627
+Siponimod,1510913
+Solriamfetol,1510970
+Romosozumab,1511251
+Risankizumab,1511348
+Paricalcitol,1517740
+Dexamethasone,1518254
+Betaine,1520218
+Teriparatide,1521987
+Octreotide,1522957
+Olipudase alfa,1525563
+Agalsidase beta,1525746
+Dostarlimab,1536789
+Amivantamab,1536935
+Sotorasib,1536963
+Sotrovimab,1536976
+Aducanumab,1537087
+Pegcetacoplan,1537122
+Somapacitan,1537123
+Laronidase,1543229
+Cinacalcet,1548111
+Levocarnitine,1553610
+Encorafenib,1559914
+Binimetinib,1559930
+Ivosidenib,1560123
+Somatropin,1584910
+Nitisinone,1586640
+Brodalumab,1592513
+Telotristat,1592537
+Ribociclib,1592911
+Nusinersen,1593031
+Avelumab,1593273
+Ocrelizumab,1593457
+Dupilumab,1593467
+Guselkumab,1593700
+Valbenazine,1593849
+Niraparib,1593861
+Midostaurin,1594003
+Durvalumab,1594034
+Abaloparatide,1594148
+Brigatinib,1594187
+Cerliponase,1594332
+Sarilumab,1594587
+Valganciclovir,1703063
+Emtricitabine,1703069
+Posaconazole,1704139
+Lamivudine,1704183
+Vancomycin,1707687
+Tenofovir disoproxil,1710281
+Zidovudine,1710612
+Entecavir,1711246
+Indinavir,1711523
+Deferoxamine,1711947
+Raltegravir,1712889
+Peginterferon alfa 2a,1714165
+Voriconazole,1714277
+Aztreonam,1715117
+Nitazoxanide,1715315
+Nelfinavir,1715472
+Enfuvirtide,1717002
+Caspofungin,1718054
+Vonicog alfa,1718111
+Bezlotoxumab,1718211
+Rucaparib,1718850
+Foscarnet,1724700
+Didanosine,1724869
+Aminosalicylic acid,1726228
+Atazanavir,1727223
+Fidanacogene elaparvovec,1734324
+Imetelstat,1734581
+Lebrikizumab,1735356
+Marstacimab,1735606
+Fosamprenavir,1736829
+Abacavir,1736971
+Tipranavir,1736999
+Efavirenz,1738135
+Lopinavir,1738170
+Levofloxacin,1742253
+Tigecycline,1742432
+Cidofovir,1745072
+Saquinavir,1746244
+Ritonavir,1748921
+Darunavir,1756831
+Ganciclovir,1757803
+Telbivudine,1758392
+Etravirine,1758536
+Inclisiran,1758562
+Tralokinumab,1758687
+Tebentafusp,1758886
+Sutimlimab,1758949
+Abrocitinib,1758974
+Faricimab,1759013
+Bebtelovimab,1759073
+Ribavirin,1762711
+Nevirapine,1769389
+Ceftazidime,1776684
+Stavudine,1781406
+Deferasirox,1786055
+Maraviroc,1787101
+Amikacin,1790868
+Epoetin beta,19001311
+Nelarabine,19002912
+Mycophenolate mofetil,19003999
+Trientine,19004969
+Vinblastine,19008264
+Lenograstim,19009705
+Cyclosporine,19010482
+Deferiprone,19011091
+Tenofovir,19011093
+Everolimus,19011440
+Eltrombopag,19012346
+Mycophenolic acid,19012565
+Azathioprine,19014878
+Bendamustine,19015523
+Tiratricol,19016959
+Plerixafor,19017581
+Micafungin,19018013
+Nitric oxide,19020068
+Nitrous oxide,19021129
+Sapropterin,19021959
+Fomepizole,19022479
+Poloxamer 188,19024636
+Decitabine,19024728
+Biotin,19024770
+Anidulafungin,19026450
+Lenalidomide,19026972
+Bromelains,19030387
+Romiplostim,19032407
+Sirolimus,19034726
+Calcifediol,19035569
+Tolvaptan,19036797
+Basiliximab,19038440
+Golimumab,19041065
+Treosulfan,19042545
+Miglustat,19045272
+Digoxin antibodies fab fragments,19045317
+Carnitine,19050104
+Chenodeoxycholate,19052447
+Fibrinogen,19054702
+Clofarabine,19054821
+Cladribine,19054825
+Floxacillin,19054936
+Idebenone,19067036
+Heme arginate,19068899
+Tasonermin,19071159
+Idarubicin,19078097
+Ifosfamide,19078187
+Galsulfase,19078649
+Anti inhibitor coagulant complex,19080406
+Eculizumab,19080458
+Ranibizumab,19080982
+Alglucosidase alfa,19088328
+Idursulfase,19091430
+Temsirolimus,19092845
+Panitumumab,19100985
+Carglumic acid,19102150
+Factor xiii,19106100
+Interferon beta,19109079
+Immunoglobulin g,19117912
+Antilymphocyte immunoglobulin,19136041
+Thalidomide,19137042
+Thiotepa,19137385
+Nonacog beta pegol,2987225
+Rurioctocog alfa pegol,2997891
+Leronlimab,32994
+L arginine,35197979
+Tildrakizumab,35200139
+Patisiran,35200163
+Mogamulizumab,35200202
+Migalastat,35200267
+Lusutrombopag,35200302
+Lanadelumab,35200405
+Damoctocog alfa pegol,35200416
+Doravirine,35200446
+Fremanezumab,35200577
+Duvelisib,35200763
+Cemiplimab,35200783
+Galcanezumab,35200800
+Dacomitinib,35200803
+Elapegademase,35200935
+Inotersen,35200990
+Talazoparib,35201068
+Lorlatinib,35201733
+Factor ix complex,35602783
+Idarucizumab,35602981
+Trabectedin,35603017
+Asfotase alfa,35603109
+Ixekizumab,35603563
+Reslizumab,35603983
+Obiltoxaximab,35603994
+Elotuzumab,35604032
+Venetoclax,35604205
+Sebelipase alfa,35604495
+Alectinib,35604657
+Selexipag,35604848
+Osimertinib,35605522
+Tenofovir alafenamide,35605546
+Fosaprepitant,35605594
+Daratumumab,35605744
+Cobimetinib,35605804
+Ixazomib,35606214
+Necitumumab,35606215
+Elbasvir,35606465
+Grazoprevir,35606467
+Mepolizumab,35606631
+Isavuconazole,35606695
+Roxadustat,35834902
+Recombinant human granulocyte colony stimulating factor,35884341
+Filgotinib,35891916
+Imlifidase,35894914
+Tivozanib,36026750
+Idecabtagene vicleucel,36026868
+Bulevirtide,36042920
+Autologous anti cd19 transduced cd3 cells,36118943
+Trastuzumab deruxtecan,36118944
+Obeticholic acid,36250189
+Emixustat,36848654
+Mavrilimumab,36849208
+Fasinumab,36849224
+Forigerimod,36849618
+Bentracimab,36849740
+Avalotcagene ontaparvovec,36849834
+Levoketoconazole,36850192
+Brimapitide,36850307
+Vapreotide,36850417
+Epratuzumab,36850565
+Piclidenoson,36850566
+Cobitolimod,36850637
+Begelomab,36850748
+Sabizabulin,36850815
+Sabatolimab,36851047
+Reloxaliase,36851546
+Rivipansel,36851609
+Gantenerumab,36851650
+Human coagulation factor viii von willebrand factor complex,36852550
+Concizumab,36852954
+Vatiquinone,36853229
+Eprodisate,36853254
+Obecabtagene autoleucel,36853576
+Olenasufligene relduparvovec,36853751
+Magrolimab,36854780
+Rintatolimod,36854881
+Turoctocog alfa pegol,36855418
+Letetresgene autoleucel,36855862
+Giroctocogene fitelparvovec,36856211
+Brentuximab,36856245
+Bardoxolone methyl,36856334
+Mozafancogene autotemcel,36856592
+Bizalimogene ralaplasmid,36856600
+Emiplacel,36856715
+Opaganib,36856728
+Tanezumab,36857072
+Alunacedase alfa,36857298
+Setrusumab,36857413
+Narsoplimab,36857438
+Tabelecleucel,36857534
+Terevalefim,36857672
+Fordadistrogene movaparvovec,36857896
+Dirloctocogene samoparvovec,36858087
+Etrolizumab,36858156
+Remibrutinib,36858219
+Hydromethylthionine,36858293
+Botaretigene sparoparvovec,36858299
+Alicaforsen,36858515
+Atacicept,36858752
+Leriglitazone,36858814
+Halofuginone,36859036
+Vafidemstat,36859330
+Elvucitabine,36859341
+Plonmarlimab,36859353
+Masitinib,36859404
+Beclabuvir,36859649
+Bimagrumab,36859672
+Loncastuximab,36859960
+Teprasiran,36859974
+Lenabasum,36860138
+Pegbelfermin,36860339
+Olokizumab,36860404
+Tideglusib,36860693
+C 21,36861072
+Eladocagene exuparvovec,36861297
+Fitusiran,36861527
+Acoramidis,36861566
+Apadamtase alfa,36861990
+Reparixin,36861995
+Lenadogene nolparvovec,36862990
+Navitoclax,36863201
+Human dendritic cell antigen,36878684
+Epoetin zeta,36878697
+Eptotermin alfa,36878705
+Colestilan,36878774
+Epoetin theta,36878928
+Conestat alfa,36878937
+Mifamurtide,36878942
+Dibotermin alfa,36879004
+Pixantrone,36879010
+Ataluren,36879015
+Delamanid,36879076
+Factor xi,36879148
+Sodium hydroxybutyrate,36879243
+Eptacog beta activated,36922870
+Autologous cd34 cells transduced to express human adenosine deaminase,36934062
+Tafasitamab,37002368
+Brexucabtagene autoleucel,37002369
+Belantamab mafodotin,37002419
+Risdiplam,37002532
+Satralizumab,37002573
+Pralsetinib,37002765
+Lumasiran,37003331
+Berotralstat,37003361
+Lonafarnib,37003374
+Setmelanotide,37003477
+Entrectinib,37496447
+Pitolisant,37496463
+Pretomanid,37496482
+Brolucizumab,37497314
+Diroximel fumarate,37497593
+Afamelanotide,37497655
+Crizanlizumab,37497670
+Zanubrutinib,37497691
+Luspatercept,37497705
+Voxelotor,37497986
+Givosiran,37498020
+Enfortumab,37498261
+Avapritinib,37498468
+Teprotumumab,37498633
+Isatuximab,37498969
+Rimegepant,37498993
+Eptinezumab,37499031
+Remdesivir,37499271
+Osilodrostat,37499303
+Ozanimod,37499437
+Selumetinib,37499520
+Pemigatinib,37499576
+Ustekinumab,40161532
+Canakinumab,40161669
+Pazopanib,40167554
+Ofatumumab,40167582
+Ecallantide,40168938
+Dalfampridine,40170680
+Tocilizumab,40171288
+Velaglucerase alfa,40174604
+Eteplirsen,40220748
+Cabazitaxel,40222431
+Denosumab,40222444
+Autologous cultured chondrocytes,40224705
+Fingolimod,40226579
+Eribulin,40230712
+Belimumab,40236987
+Vandetanib,40238052
+Ipilimumab,40238188
+Rilpivirine,40238930
+Abiraterone,40239056
+Belatacept,40239665
+Fidaxomicin,40239985
+Vemurafenib,40241937
+Brentuximab vedotin,40241969
+Icatibant,40242044
+Crizotinib,40242675
+Aflibercept,40244266
+Ruxolitinib,40244464
+Autologous human corneal epithelial cells,40684592
+Copper histidine,40684614
+Autologous chondrocyte spheroids,40684623
+Dinutuximab beta,40685018
+Human alpha1 proteinase inhibitor,40798876
+Ibalizumab,42544019
+Eplontersen,42608839
+Zilucoplan,42608934
+Nedosiran,42609137
+Lifileucel,42609269
+Atidarsagene autotemcel,42609446
+Sotatercept,42609512
+Danicopan,42609527
+Vadadustat,42609572
+Atezolizumab,42629079
+Darvadstrocel,42659476
+Glucarpidase,42709319
+Vismodegib,42709321
+Axitinib,42709322
+Ivacaftor,42709323
+Gemtuzumab ozogamicin,42799711
+Protein c,42801108
+Pertuzumab,42801287
+Carfilzomib,42873638
+Elvitegravir,42874212
+Cobicistat,42874220
+Defibrotide,42898933
+Enzalutamide,42900250
+Bosutinib,42900401
+Teriflunomide,42900584
+Regorafenib,42903460
+Triheptanoin,42903571
+Tofacitinib,42904205
+Ocriplasmin,42904298
+Bucillamine,43009016
+Cabozantinib,43012292
+Hydroxypropylbetadex 0 58 0 68 ms,43012352
+Pasireotide,43012417
+Bedaquiline,43012518
+Lomitapide,43013119
+Teduglutide,43013171
+Ponatinib,43013182
+Pomalidomide,43014237
+Polihexanide,43525903
+Dimethyl fumarate,43526424
+Parathyroid hormone,43532113
+Dabrafenib,43532299
+Trametinib,43532497
+Afatinib,43533090
+Dolutegravir,43560385
+Invertase,44012679
+Riociguat,44506752
+Cholic acid,44506782
+Macitentan,44507580
+Obinutuzumab,44507676
+Ibrutinib,44507848
+Factor vii,44785020
+Factor x,44785022
+Sucroferric oxyhydroxide,44785066
+Sofosbuvir,44785094
+Von willebrand factor,44785885
+Elosulfase alfa,44814525
+Metreleptin,44814585
+Apremilast,44816294
+Siltuximab,44818461
+Ceritinib,44818466
+Ramucirumab,44818489
+Coagulation factor ix recombinant immunoglobulin g1 fusion protein,44818493
+Vedolizumab,45774639
+Tafamidis,45774701
+Ledipasvir,45775020
+Peginterferon beta 1a,45775146
+Pirfenidone,45775206
+Nintedanib,45775396
+Eliglustat,45775782
+Pembrolizumab,45775965
+Efmoroctocog alfa,45776421
+Idelalisib,45776944
+Palbociclib,45892075
+Blinatumomab,45892531
+Ombitasvir,45892552
+Paritaprevir,45892554
+Dasabuvir,45892558
+Olaparib,45892579
+Nivolumab,45892628
+Secukinumab,45892883
+C1 esterase inhibitor,45892906
+Lenvatinib,46221433
+Panobinostat,46221435
+Glycerol phenylbutyrate,46274595
+Alirocumab,46275447
+Uridine triacetate,46287389
+Evolocumab,46287466
+Rho d immune globulin,535714
+Palivizumab,537647
+Odevixibat,701379
+Belumosudil,701423
+Anifrolumab,701470
+Avalglucosidase alfa,701512
+Belzutifan,701696
+Difelikefalin,701764
+Lonapegsomatropin,701794
+Mobocertinib,701915
+Maralixibat,701940
+Atogepant,701982
+Avacopan,702027
+Asciminib,702133
+Maribavir,702291
+Vosoritide,702318
+Ropeginterferon alfa 2b,702407
+Efgartigimod alfa,702468
+Tezepelumab,702498
+Molnupiravir,702536
+Interferon beta 1a,722424
+Botulinum toxin type a,729855
+Natalizumab,735843
+Cabotegravir,739588
+Voclosporin,739590
+Tepotinib,739739
+Evinacumab,739794
+Lisocabtagene maraleucel,739856
+Fosdenopterin,740047
+Ponesimod,740121
+Teclistamab,741578
+Valoctocogene roxaparvovec,745985
+Delandistrogene moxeparvovec,746024
+Nirsevimab,746155
+Quizartinib,746225
+Nadofaragene firadenovec,746328
+Elranatamab,746391
+Palovarotene,746488
+Momelotinib,746600
+Cipaglucosidase alfa,746789
+Etrasimod,746899
+Vamorolone,747167
+Iptacopan,747398
+Exagamglogene autotemcel,747499
+Glatiramer,751889
+Fenfluramine,753860
+Mitapivat,779081
+Ciltacabtagene autoleucel,779144
+Pacritinib,779180
+Relatlimab,779239
+Vipivotide tetraxetan,779271
+Mavacamten,779591
+Vutrisiran,779985
+Ganaxolone,780003
+Abemaciclib,792649
+Tisagenlecleucel,792737
+Acalabrutinib,792764
+Axicabtagene ciloleucel,792844
+Letermovir,792929
+Benralizumab,792993
+Emicizumab,793042
+Vestronidase alfa,793066
+Voretigene neparvovec,793440
+Glecaprevir,793843
+Pibrentasvir,793844
+Neratinib,793846
+Inotuzumab ozogamicin,794068
+Colistin,901845
+Tobramycin,902722
+Doxorubicin pegylated liposomal,902725
+Cysteamine,910888
+Certolizumab pegol,912263
+Verteporfin,912803
+Aprepitant,936748
+Infliximab,937368
+Alitretinoin,941052
+Tacrolimus,950637
+Sevelamer,952004
+Tezacaftor,963950
+Macimorelin,963973
+Apalutamide,963987
+Bictegravir,964008
+Sodium chloride,967823
+Collagenase,980311
+Mannitol,994058
+Fluocinolone,996541

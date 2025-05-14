@@ -1,68 +1,39 @@
 # high cost drug cohorts -----
-drug_name <- readr::read_csv(here("cohorts",
-                                  "high_cost_ingredients.csv"), 
-                             col_types = list(col_character()))
-drug_name <- drug_name |>
-  filter(is.na(exclude_reason)) |> 
-  mutate(concept_id = as.integer(concept_id))
-
-drug_codes <- getDrugIngredientCodes(cdm, 
-                                     drug_name$concept_id, 
-                                     nameStyle = "{concept_name}")
+cli::cli_inform("Creating high cost medicines cohorts")
+drug_codes <- importCodelist(path = here("cohorts", "drug_codelists"), type = "csv")
 cdm$high_cost_meds <- conceptCohort(cdm, 
                                     conceptSet = drug_codes, 
                                     name = "high_cost_meds", 
                                     exit = "event_end_date")
+# all records in study period
+cdm$high_cost_meds_all <- cdm$high_cost_meds |> 
+  requireInDateRange(dateRange = study_period, 
+                     name = "high_cost_meds_all")
+attr(cdm$high_cost_meds_all, "cohort_set") <- attr(cdm$high_cost_meds_all, "cohort_set") |> 
+  mutate(cohort_name = paste0(cohort_name, "_all"))
 
-# keep only records in study period
-cdm$high_cost_meds <- cdm$high_cost_meds |> 
-  requireInDateRange(study_period)
+# keep first ever and in study period
+cdm$high_cost_meds_first <- cdm$high_cost_meds |> 
+  requireIsFirstEntry(name = "high_cost_meds_first") |> 
+  requireInDateRange(dateRange = study_period,
+                     name = "high_cost_meds_first")
+attr(cdm$high_cost_meds_first, "cohort_set") <- attr(cdm$high_cost_meds_first, "cohort_set") |> 
+  mutate(cohort_name = paste0(cohort_name, "_first"))
+
+cdm <- bind(cdm$high_cost_meds_all, cdm$high_cost_meds_first,
+     name = "high_cost_meds")
+dropSourceTable(cdm,
+                c("high_cost_meds_all", "high_cost_meds_first"))
 
 # remove cohorts with zero counts
 high_cost_meds_with_count <- cohortCount(cdm$high_cost_meds) |>
   filter(number_subjects > 0) |> 
   dplyr::pull("cohort_definition_id")
 if(length(high_cost_meds_with_count) > 0){
-cdm$high_cost_meds <- subsetCohorts(cdm$high_cost_meds,
-                                 cohortId = high_cost_meds_with_count, 
-                                 name = "high_cost_meds")
+  cdm$high_cost_meds <- subsetCohorts(cdm$high_cost_meds,
+                                      cohortId = high_cost_meds_with_count, 
+                                      name = "high_cost_meds")
+} 
+if(length(high_cost_meds_with_count) == 0){
+  cli::cli_abort("All high cost drugs cohorts are empty")
 }
-
-# add age and sex matched cohorts -----
-cdm$high_cost_meds <- cdm$high_cost_meds |> 
-  matchCohorts(ratio = 1, 
-               keepOriginalCohorts = TRUE)
-# new cohort ids
-high_cost_meds_with_count <- cohortCount(cdm$high_cost_meds) |>
-  left_join(settings(cdm$high_cost_meds),
-            by = "cohort_definition_id") |> 
-  filter(number_subjects > 0) |> 
-  filter(stringr::str_detect(cohort_name, "sampled|matched", negate = TRUE)) |> 
-  dplyr::pull("cohort_definition_id")
-
-# icd chapter cohorts -----
-# as not all dps will have icd codes in their vocab, pre compute these
-# icd_subchapter <- readr::read_csv(here("cohorts",
-#                                   "icd_subchapter.csv"), col_types = "c") |>
-#   filter(include == "yes")
-# for(i in seq_along(icd_subchapter$icd_subchapter)){
-# codes <- getICD10StandardCodes(cdm = cdm,
-#                       name = icd_subchapter$icd_subchapter[i],
-#                       level = "ICD10 SubChapter")
-# if(inherits(codes, "codelist") && length(codes[[1]]) > 0){
-# names(codes) <- icd_subchapter$cohort_name[i]
-# codes |>
-#   subsetOnDomain(cdm = cdm,
-#                  domain = c("condition")) |>
-#   exportCodelist(type = "csv",
-#                  path = here("cohorts", "icd"))
-# }
-# }
-
-icd_chapters <- importCodelist(type = "csv",
-               path = here("cohorts", "icd"))
-cdm$icd <- conceptCohort(cdm,
-                         conceptSet = icd_chapters,
-                         name = "icd",
-                         exit = "event_end_date",
-                         subsetCohort = "high_cost_meds")

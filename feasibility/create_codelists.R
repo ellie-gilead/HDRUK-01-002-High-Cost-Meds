@@ -15,19 +15,23 @@ hc_meds <- readr::read_csv(here("hc_meds.csv")) |>
   filter(is.na(exclusion_reason))
 
 # connect to a db with vocabularies -----
-vocab.folder <- "C:/Users/eburn/Documents/vocab_2025"
-db <- DBI::dbConnect(duckdb::duckdb(), 
-                  paste0(vocab.folder,"/vocab.duckdb"))
-cdm <- cdmFromCon(db, "main", "main", cdmName = "vocab") 
+db <- DBI::dbConnect(odbc::odbc(),
+                     Driver = "ODBC Driver 18 for SQL Server",
+                     Server = "...",
+                     Database = "...",
+                     UID = "...",
+                     PWD = "...!",
+                     TrustServerCertificate = "yes",
+                     Port = "...")
+cdm <- CDMConnector::cdmFromCon(con = db,
+                                cdmSchema = c("vocabularies", "vocab_2025_02"),
+                                writeSchema = c("vocabularies", "results"),
+                                cdmName = "vocab_2025_02")
 # getVocabVersion(cdm) # "v5.0 27-FEB-25"
 
 drug_codes <- getDrugIngredientCodes(cdm, 
                                      hc_meds$concept_id, 
-                                     nameStyle = "{concept_code}_{concept_name}")
-# note we are using the ohdsi concept names from now on
-exportCodelist(drug_codes, 
-               path = here("codelists"),
-               type = "csv")
+                                     nameStyle = "{concept_id}_{concept_name}")
 
 # export table with concept code for each med ----- 
 readr::write_csv(
@@ -35,11 +39,19 @@ readr::write_csv(
     med_names = names(drug_codes)) |> 
     mutate(
       concept_name = stringr::str_replace(names(drug_codes), "^[^_]*_", ""),
-      concept_code = stringr::str_extract(med_names, "^[^_]*")) |> 
+      concept_id = stringr::str_extract(med_names, "^[^_]*"))  |> 
+    mutate(concept_name = stringr:::str_replace_all(concept_name, "_", " ")) |> 
+    mutate(concept_name = CodelistGenerator:::tidyWords(concept_name)) |> 
     mutate(concept_name = stringr::str_to_sentence(concept_name)) |> 
     select(!med_names),   
   here::here("hc_meds_concept_code.csv")
 )
+
+# note we are using the ohdsi concept names from now on
+names(drug_codes) <- stringr::str_replace(names(drug_codes), "^[^_]*_", "")
+exportCodelist(drug_codes, 
+               path = here("drug_codelists"),
+               type = "csv")
 
 
 # get atc equivalence ------
@@ -75,3 +87,30 @@ readr::write_csv(atc_ref, "atc_ref.csv")
 
 
 
+
+# icd codes ----
+icd <- getICD10StandardCodes(cdm, 
+                             level = "ICD10 Hierarchy", 
+                             nameStyle = "{concept_code}")
+# remove less relevant codes
+icd <- icd[stringr::str_starts(names(icd), 
+                               "o|p|q|r|s|t|v|w|x|y|z|u",
+                               negate = TRUE)]
+
+A09
+A28
+A48
+A49
+A63
+A64
+B08 
+B09
+icd <- icd[stringr::str_starts(names(icd),
+                               "C26|c76|c77|c78|c79|c80",
+                               negate = TRUE)]
+# keep only condition domain codes
+icd <- subsetOnDomain(icd, cdm = cdm, domain = "condition")
+
+omopgenerics::exportCodelist(icd, 
+                             path = here::here("icd"), 
+                             type = "csv")
