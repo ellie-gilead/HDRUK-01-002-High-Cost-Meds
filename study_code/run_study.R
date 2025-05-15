@@ -20,6 +20,14 @@ cdm$high_cost_meds <- cdm$high_cost_meds |>
   addAge(ageGroup = study_age_groups, 
          name = "high_cost_meds")
 
+# add inpatient flag -----
+cdm$high_cost_meds <- cdm$high_cost_meds |> 
+  addCohortIntersectFlag(targetCohortTable = "inpatient", 
+                         window = c(0, 0),
+                         nameStyle = "inpatient",
+                         name = "high_cost_meds")
+
+
 # index codes ----
 cli::cli_inform("Get index codes for high cost meds")
 for(i in seq_along(high_cost_meds_with_count)){
@@ -38,8 +46,9 @@ for(i in seq_along(high_cost_meds_with_count)){
 
 # patient characteristics ----
 cli::cli_inform("Get summary of characteristics")
-results[["chars"]] <- summariseCharacteristics(cdm$high_cost_meds, 
-                                               strata = "age_group")  
+results[["chars"]] <- summariseCharacteristics(cdm$high_cost_meds,
+                                               strata = "age_group", 
+                                               otherVariables = "inpatient")  
 # large scale characteristics ----
 cli::cli_inform("Get large scale characteristics")
 results[["lsc"]] <- summariseLargeScaleCharacteristics(cdm$high_cost_meds,
@@ -47,8 +56,7 @@ results[["lsc"]] <- summariseLargeScaleCharacteristics(cdm$high_cost_meds,
                                                "observation",
                                                "procedure_occurrence",
                                                "drug_exposure",
-                                               "drug_era",
-                                               "visit_occurrence"),
+                                               "drug_era"),
                              window = list(c(-14, 14),
                                            c(-14, -1),
                                            c(0, 0),

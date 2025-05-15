@@ -1,3 +1,11 @@
+
+# visit cohorts -----
+cdm$inpatient <- conceptCohort(
+  cdm = cdm,
+  conceptSet = list(inpatient = c(9201, 262, 9203)),
+  name = "inpatient"
+)
+
 # high cost drug cohorts -----
 cli::cli_inform("Creating high cost medicines cohorts")
 drug_codes <- importCodelist(path = here("cohorts", "drug_codelists"), type = "csv")
@@ -25,6 +33,9 @@ cdm <- bind(cdm$high_cost_meds_all, cdm$high_cost_meds_first,
 dropSourceTable(cdm,
                 c("high_cost_meds_all", "high_cost_meds_first"))
 
+# require at least 
+cdm$high_cost_meds <- cdm$high_cost_meds |> 
+  requireMinCohortCount(minCohortCount =  100)
 # remove cohorts with zero counts
 high_cost_meds_with_count <- cohortCount(cdm$high_cost_meds) |>
   filter(number_subjects > 0) |> 
