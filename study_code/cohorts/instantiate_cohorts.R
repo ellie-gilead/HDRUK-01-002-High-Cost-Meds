@@ -48,3 +48,21 @@ if(length(high_cost_meds_with_count) > 0){
 if(length(high_cost_meds_with_count) == 0){
   cli::cli_abort("All high cost drugs cohorts are empty")
 }
+
+# icd cohorts ----
+cli::cli_inform("Creating ICD cohorts")
+icd_codes <- importCodelist(path = here("cohorts", "icd"), type = "csv")
+cdm$icd <- conceptCohort(cdm, 
+                         conceptSet = icd_codes, 
+                         name = "icd", 
+                         exit = "event_start_date",
+                         subsetCohort = "high_cost_meds")
+# remove cohorts with zero counts
+icd_with_count <- cohortCount(cdm$icd) |>
+  filter(number_subjects > 0) |> 
+  dplyr::pull("cohort_definition_id")
+if(length(icd_with_count) > 0){
+  cdm$icd <- subsetCohorts(cdm$icd,
+                           cohortId = icd_with_count, 
+                           name = "icd")
+}

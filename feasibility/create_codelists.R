@@ -89,25 +89,30 @@ readr::write_csv(atc_ref, "atc_ref.csv")
 
 
 # icd codes ----
-icd <- getICD10StandardCodes(cdm, 
-                             level = "ICD10 Hierarchy", 
-                             nameStyle = "{concept_code}")
-# remove less relevant codes
-icd <- icd[stringr::str_starts(names(icd), 
-                               "o|p|q|r|s|t|v|w|x|y|z|u",
-                               negate = TRUE)]
 
-A09
-A28
-A48
-A49
-A63
-A64
-B08 
-B09
-icd <- icd[stringr::str_starts(names(icd),
-                               "C26|c76|c77|c78|c79|c80",
-                               negate = TRUE)]
+icd_subchapter <- getICD10StandardCodes(cdm,
+                      level = c("ICD10 SubChapter"),
+                      nameStyle = "{concept_code}_{concept_name}")
+icd_subchapter <- icd_subchapter[stringr::str_starts(names(icd_subchapter), 
+                                   "a15|b20|c15|c64|c73|d55|d65|n17")]
+
+icd_hierarchy <- getICD10StandardCodes(cdm,
+                                        level = c("ICD10 Hierarchy"),
+                                        nameStyle = "{concept_code}_{concept_name}")
+icd_hierarchy <- icd_hierarchy[stringr::str_starts(names(icd_hierarchy), 
+                                    "b15|b16|c34|c45|c50|c53|c56|c61|c71|c81|c82|c83|c91|c92|d70|e22|e84|e87|g20|g35|j45|m32")]
+
+icd_code <- getICD10StandardCodes(cdm,
+                                  level = c("ICD10 Code"),
+                                  nameStyle = "{concept_code}_{concept_name}")
+icd_code <- icd_code[stringr::str_starts(names(icd_code), 
+                                      "c900|g710|i270|z940")]
+
+icd <- bind(icd_subchapter,
+            icd_hierarchy,
+            icd_code)
+
+
 # keep only condition domain codes
 icd <- subsetOnDomain(icd, cdm = cdm, domain = "condition")
 

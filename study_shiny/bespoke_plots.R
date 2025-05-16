@@ -12,9 +12,6 @@ atc_ref <- atc_ref |>
 
 res <- importSummarisedResult(here::here("data"))
 
-tableCharacteristics(res)
-
-
 # plot cohort counts
 counts <- tidy(res |> 
        filterSettings(result_type == "summarise_characteristics")) |> 
@@ -23,6 +20,22 @@ counts <- tidy(res |>
   mutate(cohort_name_short = str_replace(cohort_name_short, "_all", "")) |> 
   mutate(cohort_name_short = str_replace(cohort_name_short, "_first", ""))
 
+counts |> 
+  filter(str_detect(cohort_name, "_all")) |> 
+  filter(age_group == "overall"
+         ,
+         variable_name == "Number subjects"
+         ) |> 
+  ggplot() +
+  facet_grid(variable_name ~ cdm_name, scales = "free") +
+  geom_col(aes(count, cohort_name, 
+               fill = cohort_name)) +
+  theme_bw() +
+  theme(legend.position = "none")
+
+
+
+variable_name
 
 
 drug_counts_atc_1 <- counts |> 
@@ -39,18 +52,6 @@ drug_counts_atc_4 <- counts |>
               filter(concept_class_id == "ATC 4th"))
 
 
-
-
-counts |> 
-  filter(str_detect(cohort_name, "_first")) |> 
-  filter(age_group == "overall",
-         variable_name == "Number subjects") |> 
-  ggplot() +
-  facet_grid(variable_name ~ cdm_name, scales = "free") +
-  geom_col(aes(count, cohort_name, 
-               fill = cohort_name)) +
-  theme_bw() +
-  theme(legend.position = "none")
 
 drug_counts_atc_1 |> 
   filter(str_detect(cohort_name, "_first")) |> 
