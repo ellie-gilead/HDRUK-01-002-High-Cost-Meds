@@ -170,8 +170,7 @@ server <- function(input, output, session) {
         .data$variable_name %in% input$summarise_characteristics_variable_name,
         .data$estimate_name %in% input$summarise_characteristics_estimate_name
       ) |>
-      omopgenerics::filterGroup(.data$cohort_name %in% input$summarise_characteristics_cohort_name) |>
-      omopgenerics::filterStrata(.data$age_group %in% input$summarise_characteristics_age_group)
+      omopgenerics::filterGroup(.data$cohort_name %in% input$summarise_characteristics_cohort_name)
   })
   getSummariseCharacteristicsTidy <- shiny::reactive({
     tidyDT(getSummariseCharacteristicsData(), input$summarise_characteristics_tidy_columns, input$summarise_characteristics_tidy_pivot_estimates)

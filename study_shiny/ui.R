@@ -463,14 +463,6 @@ ui <- bslib::page_navbar(
             options = list(`actions-box` = TRUE, size = 10, `selected-text-format` = "count > 3")
           ),
           shinyWidgets::pickerInput(
-            inputId = "summarise_characteristics_age_group",
-            label = "Age group",
-            choices = choices$summarise_characteristics_age_group,
-            selected = selected$summarise_characteristics_age_group,
-            multiple = TRUE,
-            options = list(`actions-box` = TRUE, size = 10, `selected-text-format` = "count > 3")
-          ),
-          shinyWidgets::pickerInput(
             inputId = "summarise_characteristics_variable_name",
             label = "Variable name",
             choices = choices$summarise_characteristics_variable_name,
@@ -505,8 +497,8 @@ ui <- bslib::page_navbar(
                   shinyWidgets::pickerInput(
                     inputId = "summarise_characteristics_tidy_columns",
                     label = "Columns",
-                    choices = c("cdm_name", "cohort_name", "age_group", "table_name", "variable_name", "variable_level"),
-                    selected = c("cdm_name", "cohort_name", "age_group", "variable_name", "variable_level"),
+                    choices = c("cdm_name", "cohort_name", "table", "window", "value", "table_name", "variable_name", "variable_level"),
+                    selected = c("cdm_name", "cohort_name", "table", "window", "value", "variable_name", "variable_level"),
                     multiple = TRUE,
                     options = list(`actions-box` = TRUE, size = 10, `selected-text-format` = "count > 3")
                   ),
@@ -547,7 +539,7 @@ ui <- bslib::page_navbar(
                     header = NULL,
                     sortable::add_rank_list(
                       text = "None",
-                      labels = c("age_group", "variable_name", "variable_level", "estimate_name"),
+                      labels = c("variable_name", "variable_level", "estimate_name"),
                       input_id = "summarise_characteristics_table_none"
                     ),
                     sortable::add_rank_list(
@@ -562,7 +554,7 @@ ui <- bslib::page_navbar(
                     ),
                     sortable::add_rank_list(
                       text = "Hide",
-                      labels = "table_name",
+                      labels = c("table", "window", "value", "table_name"),
                       input_id = "summarise_characteristics_table_hide"
                     )
                   ),
@@ -625,7 +617,7 @@ ui <- bslib::page_navbar(
                   shinyWidgets::pickerInput(
                     inputId = "summarise_characteristics_plot_facet",
                     label = "Facet",
-                    choices = c("cdm_name", "cohort_name", "age_group"),
+                    choices = c("cdm_name", "cohort_name"),
                     selected = "cdm_name",
                     multiple = TRUE,
                     options = list(`actions-box` = TRUE, size = 10, `selected-text-format` = "count > 3")
@@ -633,7 +625,7 @@ ui <- bslib::page_navbar(
                   shinyWidgets::pickerInput(
                     inputId = "summarise_characteristics_plot_colour",
                     label = "Colour",
-                    choices = c("cdm_name", "cohort_name", "age_group"),
+                    choices = c("cdm_name", "cohort_name"),
                     selected = "cohort_name",
                     multiple = TRUE,
                     options = list(`actions-box` = TRUE, size = 10, `selected-text-format` = "count > 3")

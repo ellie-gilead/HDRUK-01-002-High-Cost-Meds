@@ -32,6 +32,7 @@ cdm <- CDMConnector::cdmFromCon(con = db,
 drug_codes <- getDrugIngredientCodes(cdm, 
                                      hc_meds$concept_id, 
                                      nameStyle = "{concept_id}_{concept_name}")
+drug_codes <- subsetOnDomain(drug_codes, cdm = cdm, domain = "drug")
 
 # export table with concept code for each med ----- 
 readr::write_csv(
@@ -95,6 +96,8 @@ icd_subchapter <- getICD10StandardCodes(cdm,
                       nameStyle = "{concept_code}_{concept_name}")
 icd_subchapter <- icd_subchapter[stringr::str_starts(names(icd_subchapter), 
                                    "a15|b20|c15|c64|c73|d55|d65|n17")]
+icd_subchapter$b20_b24_human_immunodeficiency_virus_hiv_disease <- getDescendants(cdm, 439727) |> 
+  select(concept_id) |> distinct() |> pull()
 
 icd_hierarchy <- getICD10StandardCodes(cdm,
                                         level = c("ICD10 Hierarchy"),
@@ -111,7 +114,6 @@ icd_code <- icd_code[stringr::str_starts(names(icd_code),
 icd <- bind(icd_subchapter,
             icd_hierarchy,
             icd_code)
-
 
 # keep only condition domain codes
 icd <- subsetOnDomain(icd, cdm = cdm, domain = "condition")
