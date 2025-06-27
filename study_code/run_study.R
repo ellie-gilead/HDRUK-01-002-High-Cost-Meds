@@ -59,7 +59,19 @@ for(i in seq_along(icd_with_count)){
     byConcept = TRUE
   )
 }
-
+cli::cli_inform("Get index codes for procedures")
+for(i in seq_along(procedures_with_count)){
+  results[[paste0("procedure_code_diag_", i)]] <- CodelistGenerator::summariseCohortCodeUse(
+    x = omopgenerics::cohortCodelist(cdm$procedures, 
+                                     icd_with_count[[i]]),
+    cdm = cdm,
+    cohortTable = "procedures",
+    cohortId = procedures_with_count[[i]],
+    timing = "entry",
+    countBy = c("record", "person"),
+    byConcept = TRUE
+  )
+}
 # patient characteristics ----
 cli::cli_inform("Get summary of characteristics")
 results[["chars"]] <- summariseCharacteristics(cdm$high_cost_meds,
@@ -67,7 +79,7 @@ results[["chars"]] <- summariseCharacteristics(cdm$high_cost_meds,
                                                cohortIntersectFlag = list(targetCohortTable = "icd",
                                                                           window = c(-14, 14)),
                                                otherVariables = "inpatient",
-                                               estimates = list(inpatient = c("binary")))  
+                                               estimates = list(inpatient = c("count", "percentage")))  
 # large scale characteristics ----
 cli::cli_inform("Get large scale characteristics")
 results[["lsc"]] <- summariseLargeScaleCharacteristics(cdm$high_cost_meds,

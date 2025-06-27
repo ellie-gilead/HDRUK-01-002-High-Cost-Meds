@@ -9,7 +9,7 @@ library(CodelistGenerator)
 library(dplyr)
 library(here)
 
-# create codelists
+# create codelists -----
 # for each high cost ingredient we will get it and all its descendants
 hc_meds <- readr::read_csv(here("hc_meds.csv")) |> 
   filter(is.na(exclusion_reason))
@@ -95,29 +95,62 @@ icd_subchapter <- getICD10StandardCodes(cdm,
                       level = c("ICD10 SubChapter"),
                       nameStyle = "{concept_code}_{concept_name}")
 icd_subchapter <- icd_subchapter[stringr::str_starts(names(icd_subchapter), 
-                                   "a15|b20|c15|c64|c73|d55|d65|n17")]
-icd_subchapter$b20_b24_human_immunodeficiency_virus_hiv_disease <- getDescendants(cdm, 439727) |> 
-  select(concept_id) |> distinct() |> pull()
+                                   "a15|b20|c15|c64|c73|d55|d65|n17|q20")]
 
 icd_hierarchy <- getICD10StandardCodes(cdm,
                                         level = c("ICD10 Hierarchy"),
                                         nameStyle = "{concept_code}_{concept_name}")
 icd_hierarchy <- icd_hierarchy[stringr::str_starts(names(icd_hierarchy), 
-                                    "b15|b16|c34|c45|c50|c53|c56|c61|c71|c81|c82|c83|c91|c92|d70|e22|e84|e87|g20|g35|j45|m32")]
+                                    "a41|b15|b16|b25|c34|c40|c45|c49|c50|c53|c54|c56|c61|c71|c81|c82|c83|c91|c92|d70|e21|e22|e83|e84|g20|g35|i63|j12|j18|j22|j45|j47|k21|k50|k51|l03|l97|m06|m32|m81|O00|q21|r11|r50|r54|t86")]
 
 icd_code <- getICD10StandardCodes(cdm,
                                   level = c("ICD10 Code"),
                                   nameStyle = "{concept_code}_{concept_name}")
 icd_code <- icd_code[stringr::str_starts(names(icd_code), 
-                                      "c900|g710|i270|z940")]
+                                      "a047|a099|c900|d570|e870|e871|e872|e873|e875|e876|e877|g710|g936|j440|j960|j981|n390|i270|i517|q899|u071|z940")]
+
+# add specific
+icd_subchapter$b20_b24_human_immunodeficiency_virus_hiv_disease <- getDescendants(cdm, 439727) |> 
+  select(concept_id) |> distinct() |> pull()
+
+icd_code$u071_emergency_use_of_u071__covid_19_virus_identified
+names(icd_code) <- stringr::str_replace(names(icd_code),
+            "u071_emergency_use_of_u071__covid_19_virus_identified",
+            "u071_covid_19_virus_identified")
+icd_code$u071_covid_19_virus_identified <- c(icd_code$u071_covid_19_virus_identified,
+  getDescendants(cdm, 4100065) |> 
+  select(concept_id) |> pull()) |> unique()
 
 icd <- bind(icd_subchapter,
             icd_hierarchy,
             icd_code)
-
-# keep only condition domain codes
 icd <- subsetOnDomain(icd, cdm = cdm, domain = "condition")
-
 omopgenerics::exportCodelist(icd, 
                              path = here::here("icd"), 
                              type = "csv")
+
+# procedures ----
+procedures <- list(chemotherapy = getDescendants(cdm, 4273629) |> 
+  select(concept_id) |> distinct() |> pull(),
+  blood_transfusion = getDescendants(cdm, 4024656) |> 
+    select(concept_id) |> distinct() |> pull(),
+  hemodialysis = getDescendants(cdm, 4120120) |> 
+    select(concept_id) |> distinct() |> pull(),
+  pacemaker_implantation = getDescendants(cdm, 4144921) |> 
+    select(concept_id) |> distinct() |> pull(),
+  stem_cell_transplant = getDescendants(cdm, 37154552) |> 
+    select(concept_id) |> distinct() |> pull(),
+  transplant_of_kidney = getDescendants(cdm, 4322471) |> 
+    select(concept_id) |> distinct() |> pull())
+procedures <- subsetOnDomain(procedures, cdm = cdm, domain = "procedure")
+omopgenerics::exportCodelist(procedures, 
+                             path = here::here("procedures"), 
+                             type = "csv")
+
+
+
+
+
+
+
+

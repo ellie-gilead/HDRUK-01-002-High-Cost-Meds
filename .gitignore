@@ -44,3 +44,4 @@ feasibility/*.png
 study_code/results/*.csv
 study_shiny/data/*.csv
 feasibility/drug_counts.csv
+study_shiny/rsconnect/shinyapps.io/dpa-pde-oxford/heron_high_cost_meds.dcf

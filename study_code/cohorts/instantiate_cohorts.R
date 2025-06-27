@@ -35,7 +35,7 @@ dropSourceTable(cdm,
 
 # require at least 
 cdm$high_cost_meds <- cdm$high_cost_meds |> 
-  requireMinCohortCount(minCohortCount =  100)
+  requireMinCohortCount(minCohortCount =  min_cell_count)
 # remove cohorts with zero counts
 high_cost_meds_with_count <- cohortCount(cdm$high_cost_meds) |>
   filter(number_subjects > 0) |> 
@@ -65,4 +65,22 @@ if(length(icd_with_count) > 0){
   cdm$icd <- subsetCohorts(cdm$icd,
                            cohortId = icd_with_count, 
                            name = "icd")
+}
+
+# procedure cohorts ----
+cli::cli_inform("Creating ICD cohorts")
+procedure_codes <- importCodelist(path = here("cohorts", "procedures"), type = "csv")
+cdm$procedures <- conceptCohort(cdm, 
+                         conceptSet = icd_codes, 
+                         name = "procedures", 
+                         exit = "event_start_date",
+                         subsetCohort = "high_cost_meds")
+# remove cohorts with zero counts
+procedures_with_count <- cohortCount(cdm$procedures) |>
+  filter(number_subjects > 0) |> 
+  dplyr::pull("cohort_definition_id")
+if(length(procedures_with_count) > 0){
+  cdm$procedures <- subsetCohorts(cdm$procedures,
+                           cohortId = procedures_with_count, 
+                           name = "procedures")
 }
