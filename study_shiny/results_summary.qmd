@@ -25,9 +25,9 @@ atc_ref <- atc_ref |>
 res <- importSummarisedResult(here::here("data"))
 res <- res |> 
   mutate(cdm_name = if_else(cdm_name == "GOSH_OMOP", "GOSH", cdm_name)) |> 
-  mutate(cdm_name = if_else(cdm_name == "IDRIL_1", "IDRIL", cdm_name)) |> 
-  mutate(cdm_name = if_else(cdm_name == "Barts Health", "Barts", cdm_name)) |> 
-  mutate(cdm_name = if_else(str_detect(cdm_name, "UCLH"), "UCLH", cdm_name))
+  mutate(cdm_name = if_else(cdm_name == "IDRIL_1", "IDRIL", cdm_name)) |>  
+  mutate(cdm_name = if_else(str_detect(cdm_name, "Barts"), "Barts", cdm_name)) |> 
+  mutate(cdm_name = if_else(str_detect(cdm_name, "UCLH-from-2019-v2"), "UCLH", cdm_name))
 
 res <- res |>
   mutate(variable_level = case_when(
@@ -607,7 +607,7 @@ plot_indications("J") + facet_wrap(vars(name), scales = "free_y", ncol = 4)
 # ATC Group L01: Antineoplastic agents
 ```{r, echo=FALSE, warning = FALSE, message=FALSE, results = 'asis', fig.align="center", fig.width=9, fig.height=12, out.width = '100%', dpi=600}
 plot_count_age_and_sex("L01", level = "ATC 3rd")
-ggsave(filename = 'lo1.png', width = 9, height = 12, dpi = 600)
+ggsave(filename = 'lo1.png', width = 9, height = 12, dpi = 900)
 plot_indications("L01", level = "ATC 3rd") + facet_wrap(vars(name), scales = "free_y", ncol = 4)
 ```
 
