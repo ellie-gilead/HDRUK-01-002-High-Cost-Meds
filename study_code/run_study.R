@@ -21,7 +21,7 @@ results[["snapshot"]] <- summariseOmopSnapshot(cdm)
 results[["obs_period"]] <- summariseObservationPeriod(cdm$observation_period)
 
 # instantiate cohorts ----
-source(here("Cohorts", "instantiate_cohorts.R"))
+source(here("cohorts", "instantiate_cohorts.R"))
 
 # add inpatient flag -----
 cdm$high_cost_meds <- cdm$high_cost_meds |> 
