@@ -48,3 +48,7 @@ study_shiny/rsconnect/shinyapps.io/dpa-pde-oxford/heron_high_cost_meds.dcf
 study_shiny/results_summary_files/figure-docx/*.png
 study_shiny/*.png
 study_shiny/results_summary.docx
+study_shiny/data/original/*.csv
+study_shiny/*.png
+study_shiny/*.docx
+study_shiny/*.png
