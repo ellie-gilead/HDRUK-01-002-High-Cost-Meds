@@ -18,25 +18,24 @@ library(RPostgres)
 library(odbc)
 
 # database details -----
-db <- DBI::dbConnect("....")
+db <- dbConnect(
+  drv = Redshift(),
+  dbname = Sys.getenv("DB_NAME"),
+  host = Sys.getenv("HOST"),
+  port = Sys.getenv("PORT"),
+  password = Sys.getenv("PASSWORD"),
+  user = Sys.getenv("USERNAME")
+)
 
-# The name of your database to be used when reporting results
-db_name <- "...."
+database <- "AMB"
+cdmSchema <- Sys.getenv(paste0(database,"_SCHEMA"))
+writeSchema <- Sys.getenv("WRITE_SCHEMA")
+writePrefix <- paste0("high_cost_meds_",database)
 
-# The name of the schema that contains the OMOP CDM with patient-level data
-cdm_schema <- "...."
-
-# The name of the schema where results tables will be created
-write_schema <- "...."
-
-# A prefix that will be used when creating any tables during the study execution
-write_prefix <- "...."
-
-cdm <- cdmFromCon(db, 
-                  cdmName = db_name,
-                  cdmSchema = cdm_schema, 
-                  writeSchema = write_schema, 
-                  writePrefix = write_prefix)
+cdm <- CDMConnector::cdmFromCon(con = db,
+                                cdmSchema = cdmSchema,
+                                writeSchema = writeSchema,
+                                writePrefix = writePrefix)
 
 # run study -----
 # minimum counts that can be displayed according to data governance
